@@ -54,6 +54,10 @@
   <ItemGroup>
     <Compile Include="Model1.cs" />
     <Compile Include="Model\ModelSelfReference.cs" />
+    <Compile Include="Model\Photograph.cs" />
+    <Compile Include="Model\PhotographFullImage.cs" />
+    <Compile Include="Model\Product.cs" />
+    <Compile Include="Model\ProductContext.cs" />
     <Compile Include="Model\SelfReference.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
