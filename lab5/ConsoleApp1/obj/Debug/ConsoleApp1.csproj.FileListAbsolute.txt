@@ -1,0 +1,11 @@
+D:\Fac\Tsp.Net\lab5\ConsoleApp1\bin\Debug\ConsoleApp1.exe.config
+D:\Fac\Tsp.Net\lab5\ConsoleApp1\bin\Debug\ConsoleApp1.exe
+D:\Fac\Tsp.Net\lab5\ConsoleApp1\bin\Debug\ConsoleApp1.pdb
+D:\Fac\Tsp.Net\lab5\ConsoleApp1\bin\Debug\EntityFramework.dll
+D:\Fac\Tsp.Net\lab5\ConsoleApp1\bin\Debug\EntityFramework.SqlServer.dll
+D:\Fac\Tsp.Net\lab5\ConsoleApp1\bin\Debug\EntityFramework.xml
+D:\Fac\Tsp.Net\lab5\ConsoleApp1\bin\Debug\EntityFramework.SqlServer.xml
+D:\Fac\Tsp.Net\lab5\ConsoleApp1\obj\Debug\ConsoleApp1.csprojAssemblyReference.cache
+D:\Fac\Tsp.Net\lab5\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.CopyComplete
+D:\Fac\Tsp.Net\lab5\ConsoleApp1\obj\Debug\ConsoleApp1.exe
+D:\Fac\Tsp.Net\lab5\ConsoleApp1\obj\Debug\ConsoleApp1.pdb
