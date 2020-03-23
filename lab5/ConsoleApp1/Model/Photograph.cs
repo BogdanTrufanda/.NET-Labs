@@ -16,3 +16,4 @@ namespace ConsoleApp1.Model
         [ForeignKey("PhotoId")] public virtual PhotographFullImage PhotographFullImage { get; set; }
 
     }
+}

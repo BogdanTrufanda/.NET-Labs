@@ -11,7 +11,7 @@ namespace EF_StudiiDeCaz
         {
             using (var databasecon = new ModelSelfReferences())
             {
-                var name = new Model.SelfReference { Name = "Robert" };
+                var name = new Model.SelfReference { Name = "Dan" };
                 databasecon.SelfReferences.Add(name);
                 databasecon.SaveChanges();
                 Console.WriteLine("\n");
@@ -29,9 +29,9 @@ namespace EF_StudiiDeCaz
 
         }
 
-        public static void P2Create()
+        public static void P2()
         {
-            using (var context = new ProductContext())
+           using (var context = new ProductContext())
             {
                 var product = new Product
                 {
@@ -49,12 +49,7 @@ namespace EF_StudiiDeCaz
                 context.Products.Add(product);
                 context.SaveChanges();
             }
-
-
-
-        }
-        public static void P2()
-        {
+            
             using (var context = new ProductContext())
             {
                 foreach (var x in context.Products)
@@ -62,36 +57,163 @@ namespace EF_StudiiDeCaz
                     Console.WriteLine("{0} {1} {2} {3}", x.SKU, x.Description, x.Price.ToString("C"), x.ImageURL);
                 }
             }
+
+
+
         }
-
-
-
-
-
-
-        static void Main(string[] args)
+        public static void P3()
         {
-            //P2();
-
             byte[] thumbBits = new byte[100];
             byte[] fullBits = new byte[2000];
-            using (var context = new PhotographFullImage())
+            using (var context = new PhotosContext())
             {
-                var photo = new Photograph { Title = "My Dog", ThumbnailBits = thumbBits };
-                varfullImage = new PhotographFullImage { HighResolutionBits = fullBits };
-                photo.PhotographFullImage = fullImage; context.Photographs.Add(photo);
+                var photo = new Photograph
+                {
+                    Title = "My Dog",
+                    ThumbnailBits = thumbBits
+                };
+                var fullImage = new PhotographFullImage
+                {
+                    HighResolutionBits =
+                fullBits
+                };
+                photo.PhotographFullImage = fullImage;
+                context.Photographs.Add(photo);
                 context.SaveChanges();
             }
 
-            using (var context = new ...Context()){
+            using (var context = new PhotosContext())
+            {
                 foreach (var photo in context.Photographs)
                 {
                     Console.WriteLine("Photo: {0}, ThumbnailSize {1} bytes",
-                photo.Title, photo.ThumbnailBits.Length);// explicitly load the "expensive" entity,context.Entry(photo).Reference(p => p.PhotographFullImage).Load();Console.WriteLine("Full Image Size: {0} bytes",photo.PhotographFullImage.HighResolutionBits.Length);}}
-
-
-
-
+                    photo.Title, photo.ThumbnailBits.Length);
+                    // explicitly load the "expensive" entity,
+                    context.Entry(photo)
+                    .Reference(p => p.PhotographFullImage).Load();
+                    Console.WriteLine("Full Image Size: {0} bytes",
+                    photo.PhotographFullImage.HighResolutionBits.Length);
                 }
             }
         }
+
+        public static void P4()
+        {
+            using (var context = new CommContext())
+            {
+                var business = new Business
+                {
+                    Name = "Corner Dry Cleaning",
+                    LicenseNumber = "100x1"
+                };
+                context.Businesses.Add(business);
+                var retail = new Retail
+                {
+                    Name = "Shop and Save",
+                    LicenseNumber =
+                "200C",
+                    Address = "101 Main",
+                    City = "Anytown",
+                    State = "TX",
+                    ZIPCode = "76106"
+                };
+                context.Businesses.Add(retail);
+                var web = new eCommerce
+                {
+                    Name = "BuyNow.com",
+                    LicenseNumber =
+                "300AB",
+                    URL = "www.buynow.com"
+                };
+                context.Businesses.Add(web);
+                context.SaveChanges();
+            }
+            using (var context = new CommContext())
+            {
+                Console.WriteLine("\n--- All Businesses ---");
+                foreach (var b in context.Businesses)
+                {
+                    Console.WriteLine("{0} (#{1})", b.Name, b.LicenseNumber);
+                }
+                Console.WriteLine("\n--- Retail Businesses ---");
+                foreach (var r in context.Businesses.OfType<Retail>())
+                {
+                    Console.WriteLine("{0} (#{1})", r.Name, r.LicenseNumber);
+                    Console.WriteLine("{0}", r.Address);
+                    Console.WriteLine("{0}, {1} {2}", r.City, r.State, r.ZIPCode);
+                }
+                Console.WriteLine("\n--- eCommerce Businesses ---");
+                foreach (var e in context.Businesses.OfType<eCommerce>())
+                {
+                    Console.WriteLine("{0} (#{1})", e.Name, e.LicenseNumber);
+                    Console.WriteLine("Online address is: {0}", e.URL);
+                }
+            }
+
+
+        }
+
+        public static void P5()
+        {
+            using (var context = new EmployContext())
+            {
+                var fte = new FullTimeEmploy
+                {
+                    FirstName = "Jane",
+                    LastName =
+                "Doe",
+                    Salary = 71500M
+                };
+                context.Employees.Add(fte);
+                fte = new FullTimeEmploy
+                {
+                    FirstName = "John",
+                    LastName = "Smith",
+                    Salary = 62500M
+                };
+                context.Employees.Add(fte);
+                var hourly = new HourEmploy
+                {
+                    FirstName = "Tom",
+                    LastName =
+                "Jones",
+                    Wage = 8.75M
+                };
+                context.Employees.Add(hourly);
+                context.SaveChanges();
+            }
+            using (var context = new EmployContext())
+            {
+                Console.WriteLine("--- All Employees ---");
+                foreach (var emp in context.Employees)
+                {
+                    bool fullTime = emp is HourEmploy ? false : true;
+                    Console.WriteLine("{0} {1} ({2})", emp.FirstName, emp.LastName,
+                    fullTime ? "Full Time" : "Hourly");
+                }
+                Console.WriteLine("--- Full Time ---");
+                foreach (var fte in context.Employees.OfType<FullTimeEmploy>())
+                {
+                    Console.WriteLine("{0} {1}", fte.FirstName, fte.LastName);
+                }
+                Console.WriteLine("--- Hourly ---");
+                foreach (var hourly in context.Employees.OfType<HourEmploy>())
+                {
+                    Console.WriteLine("{0} {1}", hourly.FirstName,
+                    hourly.LastName);
+                }
+            }
+        }
+
+            static void Main(string[] args)
+            {
+                //P1();
+                //P2();
+                //P3();
+                //P4();
+                //P5();
+
+
+            }
+        }
+    }

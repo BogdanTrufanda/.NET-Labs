@@ -53,9 +53,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Model1.cs" />
+    <Compile Include="Model\Business.cs" />
+    <Compile Include="Model\CommContext.cs" />
+    <Compile Include="Model\eCommerce.cs" />
+    <Compile Include="Model\EmployContext.cs" />
+    <Compile Include="Model\Employee.cs" />
+    <Compile Include="Model\FullTimeEmploy.cs" />
+    <Compile Include="Model\HourEmploy.cs" />
     <Compile Include="Model\ModelSelfReference.cs" />
     <Compile Include="Model\Photograph.cs" />
     <Compile Include="Model\PhotographFullImage.cs" />
+    <Compile Include="Model\PhotosContext.cs" />
     <Compile Include="Model\Product.cs" />
     <Compile Include="Model\ProductContext.cs" />
     <Compile Include="Model\SelfReference.cs" />
