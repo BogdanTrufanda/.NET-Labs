@@ -47,9 +47,9 @@ namespace ConsoleApp1
 
             Console.WriteLine(prim1);
             Console.WriteLine(prim2);
-            Thread thread1 = new Thread(new ThreadStart(obj.Prim1));
-            Thread thread2 = new Thread(new ThreadStart(obj.Prim2));
-            thread1.Start();
+            //Thread thread1 = new Thread(new ThreadStart(obj.Prim1));
+            //Thread thread2 = new Thread(new ThreadStart(obj.Prim2));
+            //thread1.Start();
 
 
 
