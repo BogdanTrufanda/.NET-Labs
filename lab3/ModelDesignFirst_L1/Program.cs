@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,7 +14,7 @@ namespace ModelDesignFirst_L1
         {
             //TestPerson();
             //TestOneToMany();
-            // TestManyToMany();
+            TestManyToMany();
         }
         static void TestPerson()
         {
@@ -48,41 +49,40 @@ namespace ModelDesignFirst_L1
         static void TestManyToMany()
         {
             Console.WriteLine("Many to many");
+
             using (Model1Container context = new Model1Container())
             {
-                Console.WriteLine("Nume artist: \n");
-                String nume = Console.ReadLine();
-                Console.WriteLine("Prenume artist: \n");
-                String prenume = Console.ReadLine();
-                Artist a = new Artist()
-                {
-                    FirstName = nume,
-                    LastName = prenume
-                };
-                Console.WriteLine("Album..: \n");
-                String album = Console.ReadLine();
 
+                Console.WriteLine("Nume artist: ");
+                String nume = Console.ReadLine();
+                Console.WriteLine("Prenume artist: ");
+                String prenume = Console.ReadLine();
+                Console.WriteLine("Album: ");
+                String album = Console.ReadLine();
                 Album b = new Album()
                 {
                     AlbumName = album
                 };
-
-                context.Artists.Add(a);
                 context.Albums.Add(b);
 
+                ICollection<Album> albume = new Collection<Album>();
+                albume.Add(b);
+                Artist a = new Artist()
+                {
+                    FirstName = nume,
+                    LastName = prenume,
+                    Albums = albume
+                };
+
+                context.Artists.Add(a);
                 context.SaveChanges();
 
-                var items = context.Albums;
-                foreach (var y in items)
+                var items = context.Artists;
+                foreach (var x in items)
                 {
-                    Console.WriteLine("\n Albume: {0}, {1}", y.AlbumId, y.AlbumName);
-                }
-
-                var items2 = context.Artists;
-
-                foreach (var z in items2)
-                {
-                    Console.WriteLine("\n Artisti: {0}, {1}", z.FirstName, z.LastName);
+                    Console.WriteLine("Artist: {0} {1}", x.FirstName, x.LastName);
+                    foreach (var y in x.Albums)
+                        Console.WriteLine("Album: {0}", y.AlbumName);
                 }
 
 

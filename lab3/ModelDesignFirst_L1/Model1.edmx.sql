@@ -2,8 +2,8 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 03/03/2020 22:19:54
--- Generated from EDMX file: D:\Fac\Tsp.Net\lab3\ModelDesignFirst_L1\Model1.edmx
+-- Date Created: 03/23/2020 14:22:15
+-- Generated from EDMX file: C:\Users\Valentin\OneDrive\New folder\ModelDesignFirst_L1\Model1.edmx
 -- --------------------------------------------------
 
 SET QUOTED_IDENTIFIER OFF;
@@ -83,14 +83,14 @@ GO
 
 -- Creating table 'Albums'
 CREATE TABLE [dbo].[Albums] (
-    [AlbumId] int  NOT NULL,
+    [AlbumId] int IDENTITY(1,1) NOT NULL,
     [AlbumName] nchar(10)  NOT NULL
 );
 GO
 
 -- Creating table 'Artists'
 CREATE TABLE [dbo].[Artists] (
-    [ArtistId] int  NOT NULL,
+    [ArtistId] int IDENTITY(1,1) NOT NULL,
     [FirstName] nchar(10)  NOT NULL,
     [LastName] nchar(10)  NOT NULL
 );

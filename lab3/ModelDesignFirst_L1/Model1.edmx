@@ -56,14 +56,14 @@
     <Key>
       <PropertyRef Name="AlbumId" />
     </Key>
-    <Property Name="AlbumId" Type="int" Nullable="false" />
+    <Property Name="AlbumId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="AlbumName" Type="nchar" Nullable="false" MaxLength="10" />
   </EntityType>
   <EntityType Name="Artists">
     <Key>
       <PropertyRef Name="ArtistId" />
     </Key>
-    <Property Name="ArtistId" Type="int" Nullable="false" />
+    <Property Name="ArtistId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="FirstName" Type="nchar" Nullable="false" MaxLength="10" />
     <Property Name="LastName" Type="nchar" Nullable="false" MaxLength="10" />
   </EntityType>
@@ -175,7 +175,7 @@
           <Key>
             <PropertyRef Name="AlbumId" />
           </Key>
-          <Property Name="AlbumId" Type="Int32" Nullable="false" />
+          <Property Name="AlbumId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="AlbumName" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
           <NavigationProperty Name="Artists" Relationship="Model1.AlbumArtist" FromRole="Album" ToRole="Artist" />
         </EntityType>
@@ -183,7 +183,7 @@
           <Key>
             <PropertyRef Name="ArtistId" />
           </Key>
-          <Property Name="ArtistId" Type="Int32" Nullable="false" />
+          <Property Name="ArtistId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="FirstName" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
           <Property Name="LastName" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
           <NavigationProperty Name="Albums" Relationship="Model1.AlbumArtist" FromRole="Artist" ToRole="Album" />
