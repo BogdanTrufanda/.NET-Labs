@@ -11,3 +11,4 @@ D:\Fac\Tsp.Net\lab6\ObjectWCF\obj\Debug\ObjectWCF.csprojAssemblyReference.cache
 D:\Fac\Tsp.Net\lab6\ObjectWCF\obj\Debug\ObjectWCF.csproj.CopyComplete
 D:\Fac\Tsp.Net\lab6\ObjectWCF\obj\Debug\ObjectWCF.dll
 D:\Fac\Tsp.Net\lab6\ObjectWCF\obj\Debug\ObjectWCF.pdb
+D:\Fac\Tsp.Net\lab6\ObjectWCF\obj\Debug\ObjectWCF.csproj.CoreCompileInputs.cache

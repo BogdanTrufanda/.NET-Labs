@@ -9,3 +9,4 @@ D:\Fac\Tsp.Net\lab6\PostComment\obj\Debug\PostComment.csprojAssemblyReference.ca
 D:\Fac\Tsp.Net\lab6\PostComment\obj\Debug\PostComment.csproj.CopyComplete
 D:\Fac\Tsp.Net\lab6\PostComment\obj\Debug\PostComment.dll
 D:\Fac\Tsp.Net\lab6\PostComment\obj\Debug\PostComment.pdb
+D:\Fac\Tsp.Net\lab6\PostComment\obj\Debug\PostComment.csproj.CoreCompileInputs.cache
