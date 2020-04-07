@@ -14,28 +14,17 @@ namespace ObjectWCF
         [OperationContract]
         void Add(string a, string b, string c, string d, string e, string f, string g);
         [OperationContract]
-        void Remove(string a);
+        void Remove(string path);
         [OperationContract]
         void Update(string a, string b, string c);
         [OperationContract]
         IEnumerable<string> GetColumnNames();
         [OperationContract]
-        int AddNewColumn(string a);
-        [OperationContract]
-        void DeleteColumn(string a);
+        List<string> GetPaths();
         [OperationContract]
         List<string> GetAll();
         [OperationContract]
-        List<string> GetNames();
-        [OperationContract]
         List<string> Get(string a);
-        [OperationContract]
-        List<string> CheckBDIntegrity();
-        [OperationContract]
-        void RemovePath(string a);
-
-
-
 
     }
 }
