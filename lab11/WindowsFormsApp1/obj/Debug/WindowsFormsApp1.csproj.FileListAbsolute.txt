@@ -1,0 +1,13 @@
+D:\Fac\Tsp.Net\lab11\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+D:\Fac\Tsp.Net\lab11\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+D:\Fac\Tsp.Net\lab11\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+D:\Fac\Tsp.Net\lab11\WindowsFormsApp1\bin\Debug\System.ServiceModel.Primitives.dll
+D:\Fac\Tsp.Net\lab11\WindowsFormsApp1\bin\Debug\System.ServiceModel.Primitives.pdb
+D:\Fac\Tsp.Net\lab11\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csprojAssemblyReference.cache
+D:\Fac\Tsp.Net\lab11\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
+D:\Fac\Tsp.Net\lab11\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+D:\Fac\Tsp.Net\lab11\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+D:\Fac\Tsp.Net\lab11\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+D:\Fac\Tsp.Net\lab11\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CopyComplete
+D:\Fac\Tsp.Net\lab11\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+D:\Fac\Tsp.Net\lab11\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
